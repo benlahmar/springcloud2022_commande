@@ -3,6 +3,8 @@
  */
 package com.habib.busines;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -46,6 +48,18 @@ public class MetierImp implements IMetier{
 		return c;
 		
 		
+	}
+
+	@Override
+	public List<Commande> all() {
+		return crepo.findAll();
+		
+	}
+
+	@Override
+	public List<Commande> all(long idclient) {
+		
+		return crepo.findByIdclient(idclient);
 	}
 
 }
