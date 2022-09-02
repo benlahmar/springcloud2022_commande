@@ -13,8 +13,8 @@ import com.habib.entities.Compte;
  * @author moi
  *
  */
-@FeignClient(name = "users-service",
-			url = "http://localhost:8082")
+@FeignClient(name = "users-service"
+			)
 public interface IClient {
 
 	@GetMapping("/comptes/{id}")
